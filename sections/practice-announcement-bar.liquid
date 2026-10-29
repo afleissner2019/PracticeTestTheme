@@ -1,0 +1,25 @@
+<div class="practice-announcement-bar">
+  {{ section.settings.text }}
+</div>
+
+{% schema %} 
+{
+    "name": "Practice announcement bar",
+    "settings": [
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Announcement text",
+            "default": "Free shipping on orders over €50"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Practice announcement bar"
+        }
+    ],
+    "enabled_on": {
+        "groups": ["header"]
+    }
+}
+{% endschema %}
