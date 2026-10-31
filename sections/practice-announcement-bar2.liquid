@@ -1,0 +1,42 @@
+<div class="practice-announcement-bar">
+    {% for block in section.blocks %}
+        <p {{  block.shopify_attributes }}>
+            {{ block.settings.text }}
+
+        </p>
+    {% endfor %}
+
+</div>
+{% schema %}
+{
+    "name": "Practice announcement bar",
+    "blocks": [
+        {
+            "type": "announcement",
+            "name": "Announcement",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Announcement text",
+                    "default": "Free shittinggggg"
+                }
+            ]
+
+        }
+    ],
+    "presets": [
+        {
+            "name": "Practice announcement bar",
+            "blocks": [
+                {
+                    "type": "announcement"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": ["header"]
+    }
+}
+{% endschema %}
